@@ -7,7 +7,7 @@ import cors from 'cors'
 const app = express();
 
 // app config
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 9101;
 
 // configuring pusher
 
@@ -44,6 +44,11 @@ db.once('open',()=>{
     })
 })
 
+
+
+
+//middle ware
+app.use(express.json());
 
 app.use(cors());
 
